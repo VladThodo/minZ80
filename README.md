@@ -1,4 +1,4 @@
-# Min-Z80
+# Min-Z80 <img src="https://github.com/VladThodo/minZ80/blob/main/zilog_inside.png" width="50" height="50"/>
 Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. 
 
 ## Basic specs
