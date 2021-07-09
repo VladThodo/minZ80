@@ -1,5 +1,5 @@
 # <img src="https://github.com/VladThodo/minZ80/blob/main/zilog_inside.png" width="50" height="50"/> Min-Z80
-Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. 
+Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. Like most single-board computers based on retro chips, the goal of this project is entirely educational. However, I think getting a basic idea on how computers work at a very low level is just awsome!
 
 ## Basic specs
 
@@ -8,3 +8,7 @@ Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The 
 * 32K RAM
 * 4 column LCD display
 * SN76489 sound chip
+
+## Before you begin
+
+An EEPROM programmer is required in order to burn the machine code to the EEPROm chip. There are comercially available products that do the job perfectly, but for a useless DIY project like this, I followed this tutorial and built my own using an Arduino Nano and a couple of shift registers. 
