@@ -6,7 +6,7 @@ Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The 
 * Z80 processor running at maximum 1MHz
 * 32K ROM
 * 32K RAM
-* 4 column LCD display
+* 4 row LCD display
 * SN76489 sound chip
 
 ## Before you begin
