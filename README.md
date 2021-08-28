@@ -11,14 +11,30 @@ Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The 
 
 ## Before you begin
 
-An EEPROM programmer is required in order to burn the machine code to the EEPROm chip. There are comercially available products that do the job perfectly, but for a useless DIY project like this, I followed <a href="https://github.com/nathsou/EEPROM-Burner#readme">this</a> tutorial and built my own using an Arduino Nano and a couple of shift registers. I do have to mention that for some reason that I do not understand, it does not work perfectly and sometimes requires multiple attempts in order to get the code properly uploaded on the EEPROM. Nonetheless, I did manage to get along only with this.
+An EEPROM programmer is required in order to burn the machine code to the EEPROM chip. There are comercially available products that do the job perfectly, but for a useless DIY project like this, I followed <a href="https://github.com/nathsou/EEPROM-Burner#readme">this</a> tutorial and built my own using an Arduino Nano and a couple of shift registers. I do have to mention that for some reason that I do not understand, it does not work perfectly and sometimes requires multiple attempts in order to get the code properly uploaded on the EEPROM. Nonetheless, I did manage to get along only with this.
 
 ## The code
 
-The computer is programmed entirely in Z80 Assembly. There's a lot of documentation available online (I find http://z80-heaven.wikidot.com particularly useful) as well as datasheets from the manufacturer that explain each possible instruction in detail.
+The computer is programmed entirely in Z80 Assembly. There's a lot of documentation available online (with http://z80-heaven.wikidot.com being particularly useful) as well as datasheets from the manufacturer that explain each possible instruction in detail.
 
 The code is assembled using `z80asm`, a generic Z80 assembler available in the main Ubuntu repository. I have not tried assembling the code on Windows and therefore I'm not aware of any assemblers for this platform, although I'm sure there must be some.
 
+If you are using Ubuntu, this simple command is all you need to run in order to get started:
+
+```   
+sudo apt-get install z80asm
+```
+
+The assembler is also availabile for Arch Linux users. To install the assembler on Arch, you need to clone the source code and build it locally (make sure you have git installed on your system first, as it is required).
+
+```
+git clone https://aur.archlinux.org/z80asm.git
+```
+
+```
+cd z80asm
+makepkg -si
+```
 
 ## The end result
 
