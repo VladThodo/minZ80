@@ -42,7 +42,7 @@ If you want to test your code before uploading it to the EEPROM or just experime
 
 ## The end result
 
-There's no such thing as an end result in this case since there's always room for improvement, either hardware or software. However, this is what the board looks like after adding all of the main components. Ben Eater built his on breadboards, but since high-quality breadboards are expensive and there's no way to get this working on cheap breadboards (loose connections are your worst nightmare when in this case), I deciced that perfboard and solder are the way to go. I tried to keep it tidy, at least on the top side, since the bottom side is just a big mess of wires. For easier serviceability, I do recommend trying to think it through more than I did when it comes to managing those wires.
+There's no such thing as an end result in this case since there's always room for improvement, either hardware or software. However, this is what the board looks like after adding all of the main components. Ben Eater built his on breadboards, but since high-quality breadboards are expensive and there's no way to get this working on cheap breadboards (loose connections are your worst nightmare in this case), I deciced that perfboard and solder are the way to go. I tried to keep it tidy, at least on the top side, since the bottom side is just a big mess of wires. For easier serviceability, I do recommend trying to think it through more than I did when it comes to managing those wires.
 
 The board is powered via a USB cable @ 5V.
 
