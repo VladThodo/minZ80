@@ -36,6 +36,8 @@ cd z80asm
 makepkg -si
 ```
 
+The documentation for the assembler can be found [here](https://www.nongnu.org/z80asm/).
+
 ## The end result
 
 Well, there's no such thing as an end result in this case since there's always room for improvement, either hardware or software. But this is what the board looks like after adding all of the main components. Ben Eater built his on breadboards, but since high-quality breadboards are expensive and there's no way to get this working on cheap breadboards (trust me, there's no way), I deciced that perfboard and solder are the way to go. I tried to keep it tidy, at least on the top side, since the bottom side is just a big mess of wires. For easier serviceability, I do recommend trying to think it through more than I did when it comes to managing those wires.
