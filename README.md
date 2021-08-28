@@ -1,5 +1,5 @@
 # <img src="https://github.com/VladThodo/minZ80/blob/main/zilog_inside.png" width="50" height="50"/> Min-Z80
-Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. Like most single-board computers based on retro chips, the goal of this project is entirely educational. However, I think getting a basic idea on how computers work at a very low level is just awsome!
+Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. Like most single-board computers based on retro chips, the goal of this project is entirely educational. However, I believe that getting an idea about the building blocks of modern computers is fascinationg.
 
 ## Basic specs
 
@@ -17,7 +17,7 @@ An EEPROM programmer is required in order to burn the machine code to the EEPROM
 
 The computer is programmed entirely in Z80 Assembly. There's a lot of documentation available online (with http://z80-heaven.wikidot.com being particularly useful) as well as datasheets from the manufacturer that explain each possible instruction in detail.
 
-The code is assembled using `z80asm`, a generic Z80 assembler available in the main Ubuntu repository. I have not tried assembling the code on Windows and therefore I'm not aware of any assemblers for this platform, although I'm sure there must be some.
+The code is assembled using `z80asm`, a generic Z80 assembler available in the main Ubuntu repository. Similar alternatives for Windows probably exist as well.
 
 If you are using Ubuntu, this simple command is all you need to run in order to get started:
 
@@ -38,9 +38,11 @@ makepkg -si
 
 The documentation for the assembler can be found [here](https://www.nongnu.org/z80asm/).
 
+If you want to test your code before uploading it to the EEPROM or just experiment with Z80 Assembly in genereal, this [emulator](https://github.com/sklivvz/z80) can be a useful resource depending on what you're trying to achieve.
+
 ## The end result
 
-Well, there's no such thing as an end result in this case since there's always room for improvement, either hardware or software. But this is what the board looks like after adding all of the main components. Ben Eater built his on breadboards, but since high-quality breadboards are expensive and there's no way to get this working on cheap breadboards (trust me, there's no way), I deciced that perfboard and solder are the way to go. I tried to keep it tidy, at least on the top side, since the bottom side is just a big mess of wires. For easier serviceability, I do recommend trying to think it through more than I did when it comes to managing those wires.
+There's no such thing as an end result in this case since there's always room for improvement, either hardware or software. However, this is what the board looks like after adding all of the main components. Ben Eater built his on breadboards, but since high-quality breadboards are expensive and there's no way to get this working on cheap breadboards (loose connections are your worst nightmare when in this case), I deciced that perfboard and solder are the way to go. I tried to keep it tidy, at least on the top side, since the bottom side is just a big mess of wires. For easier serviceability, I do recommend trying to think it through more than I did when it comes to managing those wires.
 
 The board is powered via a USB cable @ 5V.
 
