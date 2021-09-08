@@ -40,7 +40,7 @@ makepkg -si
 
 The documentation for the assembler can be found [here](https://www.nongnu.org/z80asm/).
 
-If you want to test your code before uploading it to the EEPROM or just experiment with Z80 Assembly in general, this [emulator](https://github.com/sklivvz/z80) can be a useful resource depending on what you're trying to achieve.
+If you want to test your code before uploading it to the EEPROM or just experiment with Z80 Assembly in general, this [emulator](https://github.com/sklivvz/z80) can be a useful resource depending on what you're trying to achieve. It can run simple Z80 assembly programs and display the memory contents/CPU flags etc.
 
 ## The end result
 
