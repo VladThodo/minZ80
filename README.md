@@ -13,7 +13,7 @@ This readme file is just a quick overview of the project. For more details on ho
 
 ## Before you begin
 
-An EEPROM programmer is required in order to burn the machine code to the EEPROM chip. There are comercially available products that do the job perfectly, but for a useless DIY project like this, I followed <a href="https://github.com/nathsou/EEPROM-Burner#readme">this</a> tutorial and built my own using an Arduino Nano and a couple of shift registers. I do have to mention that for some reason that I do not understand, it does not work perfectly and sometimes requires multiple attempts in order to get the code properly uploaded on the EEPROM. Nonetheless, I did manage to get along only with this.
+An EEPROM programmer is required in order to burn the machine code to the EEPROM chip. There are comercially available products that do the job perfectly, but for a useless DIY project like this, I followed <a href="https://github.com/nathsou/EEPROM-Burner#readme">this</a> tutorial and built my own using an Arduino Nano and a couple of shift registers (it is worth noting though that the provided PC software requires node version 7.10.1 in order to run without any errors). I do have to mention that for some reason that I do not understand, it does not work perfectly and sometimes requires multiple attempts in order to get the code properly uploaded on the EEPROM. Nonetheless, I did manage to get along only with this.
 
 ## The code
 
