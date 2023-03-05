@@ -1,4 +1,7 @@
 # <img src="https://github.com/VladThodo/minZ80/blob/main/zilog_inside.png" width="50" height="50"/> Min-Z80
+
+A short demo of the SBC can be found [in this video](https://www.youtube.com/watch?v=JPQeegQdPeM).
+
 Min-Z80 is a minimal single-board computer based on the Z80 microprocessor. The project was originally inspired by Ben Eater and his series on building a simple 6502 based computer, but, since I wasn't able to find any 6502 processor for following along, I decided to go my own way and build something similar based on the Z80. Like most single-board computers based on retro chips, the goal of this project is entirely educational. However, I believe that getting an idea about the building blocks of modern computers is fascinating.
 
 This readme file is just a quick overview of the project. For more details on how this SBC works, please consult the project's [wiki](https://github.com/VladThodo/minZ80/wiki).
