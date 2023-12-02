@@ -1,0 +1,223 @@
+;**************************************************
+;	Copyright (C) Vlad Todosin 2023
+;**************************************************
+
+; This file contains the main code of the SBC
+
+	include "constants.z80"
+
+	org 0x00
+
+	; The Z80 starts executing code at addr 0x00.
+	; A HEX look-up table is defined starting at addr 0x03 which takes
+	; approximately 768 bytes.
+	; We want to jump past the look-up table as soon as the CPU begins
+	; executing code.
+
+sbc_init:	; Main init routine of the processor
+	ld sp, sp_ram_addr ; Set the stackpointer somewhere high in RAM
+	di					; Disable interrupts
+	
+	call pio_init   ; I/O init
+	call lcd_init	; LCD init
+	call lcd_clear  ; Clear the LCD
+
+	call sound_chip_init
+	ld hl, init_string
+	call print_string
+
+	ld e, 0
+	ld hl, prog_start		; We'll store downloaded programs here
+	
+	jp serial_wait
+
+pio_init:
+	ld a, pio_bit_mode	; Init port a in bit mode, 7 bits as output, one bit as input
+	out (port_a_c), a
+	ld a, %10000000			; MSB as input
+	out (port_a_c), a
+	ld a, pio_out_word		; Port B used as an output
+	out (port_b_c), a
+	ret 
+
+loop:
+	ld b,8
+	ld hl, prog_start
+small_loop:
+	ld a, (hl)
+	call print_hex
+	inc hl
+	ld a,b
+	dec a
+	jp z, prog_start
+	ld b,a
+	jp small_loop
+finish:
+	halt
+	jp loop	; Infinite loop. Yay!
+
+sound_chip_init:	; Init routine for our sound chip
+	ld a, snd_we_off
+	out (port_a_d), a
+
+	ld a, %10011111
+	call write_to_sound_chip
+
+	ld a, %10111111
+	call write_to_sound_chip
+
+	ld a, %11111111
+	call write_to_sound_chip
+
+	ld a, %11011111
+	call write_to_sound_chip
+
+	ret
+
+write_to_sound_chip:
+	out (port_b_d), a
+	ld a, snd_we_on
+	out (port_a_d), a
+	ld a, snd_we_off
+	out (port_a_d), a
+	ret
+
+lcd_init:		; Init LCD display and print a hello
+	;push af		; Save the value of A
+	
+	ld a, lcd_enable	; Function set
+	out (port_a_d), a
+	ld a, %00111000
+	out (port_b_d), a
+	ld a, 0
+	out (port_a_d), a
+
+	ld a, lcd_enable	; Display on, cursor blinking
+	out (port_a_d), a
+	ld a, %00001111
+	out (port_b_d), a
+	ld a, 0
+	out (port_a_d), a
+
+	ld a, lcd_enable     ; Entry mode set
+	out (port_a_d), a
+	ld a, %00000110
+	out (port_b_d), a
+	ld a, 0
+	out (port_a_d), a
+
+	;pop af		; Restore the value of A
+	ret
+
+lcd_clear:
+	;push af			; Save value of A
+	ld a, lcd_enable
+	out (port_a_d), a
+	ld a, %00000001
+	out (port_b_d), a
+	ld a, %00001000
+	out (port_a_d), a
+	;pop af			; Restore A
+	ret
+
+; Prints a null terminated string
+; Input: HL - start address of the string
+; Output: none
+
+print_string:
+	ld a, %00001101
+	out (port_a_d), a
+	ld a, (hl)
+	cp 0
+	ret z
+	out (port_b_d), a
+	ld a, lcd_rs
+	out (port_a_d), a
+	inc hl
+	jp print_string
+
+; Prints a byte in hex format. Input: A - byte to print
+print_hex:
+	push hl
+	ld c, a		; Put a in a 16 bit reg
+	ld b, 0
+	ld hl, 0
+	add hl, bc  ; HL = A
+	add hl, hl	; Multiply HL by 4
+	add hl, hl
+	ld bc, lookup_start ; Add offset
+	add hl, bc
+	call print_string
+	pop hl
+	ret
+
+; Receive a serial byte and print it on the LCD
+
+serial_wait:
+	in a, (port_a_d)
+	bit 7, a
+	call z, serial_receive ; rx_data low, something's being sent to us
+	jp serial_wait
+
+serial_receive:
+	ld b, 0				  ; We'll store bits as they come through
+	ld d, 0				  ; Bit counter	
+	ld a, 20	
+	call bit_delay		  ; Skip start bit
+
+serial_loop:				   
+	in a, (port_a_d)	  ; Data!
+	and 0x80			  ; Isolate data bit
+	ld c, a				  ; Save A	
+	rr b				  ; Rotate b by 1
+	ld a, b					
+	or c				  ; Add new data bit	
+	ld b, a				  ; Store new value in B
+	inc d
+	ld a, d
+	cp 7
+	jp z, serial_done
+	ld a, 10
+	call bit_delay
+	jp serial_loop
+
+serial_done:
+	call lcd_clear
+	rr b
+	ld a,b
+	ld (hl),a
+	inc hl
+	inc e		   ; Last byte
+	ld a,e
+	cp 120
+	jp z, last_byte
+	jp other_byte
+
+last_byte:		
+		  
+	jp loop
+
+other_byte:
+	call lcd_clear
+	ld a,b
+	call print_hex
+	jp serial_wait
+	ret
+
+bit_delay:
+	dec a
+	ret z
+	jp bit_delay
+
+
+init_string: equ $
+	db "Waiting for serial..", 0x00 
+
+download_string: equ $
+	db "Jump to program..", 0x00
+
+back_string: equ $
+	db "Back from RAM!", 0x00
+
+lookup_start: equ $
+	include "hex_table.z80"

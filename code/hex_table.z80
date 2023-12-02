@@ -1,0 +1,768 @@
+	db 'x00'	; 0
+	db 0x00
+
+	db 'x01'	; 1
+	db 0x00
+
+	db 'x02'	; 2
+	db 0x00
+
+	db 'x03'	; 3
+	db 0x00
+
+	db 'x04'	; 4
+	db 0x00
+
+	db 'x05'	; 5
+	db 0x00
+
+	db 'x06'	; 6
+	db 0x00
+
+	db 'x07'	; 7
+	db 0x00
+
+	db 'x08'	; 8
+	db 0x00
+
+	db 'x09'	; 9
+	db 0x00
+
+	db 'x0a'	; 10
+	db 0x00
+
+	db 'x0b'	; 11
+	db 0x00
+
+	db 'x0c'	; 12
+	db 0x00
+
+	db 'x0d'	; 13
+	db 0x00
+
+	db 'x0e'	; 14
+	db 0x00
+
+	db 'x0f'	; 15
+	db 0x00
+
+	db 'x10'	; 16
+	db 0x00
+
+	db 'x11'	; 17
+	db 0x00
+
+	db 'x12'	; 18
+	db 0x00
+
+	db 'x13'	; 19
+	db 0x00
+
+	db 'x14'	; 20
+	db 0x00
+
+	db 'x15'	; 21
+	db 0x00
+
+	db 'x16'	; 22
+	db 0x00
+
+	db 'x17'	; 23
+	db 0x00
+
+	db 'x18'	; 24
+	db 0x00
+
+	db 'x19'	; 25
+	db 0x00
+
+	db 'x1a'	; 26
+	db 0x00
+
+	db 'x1b'	; 27
+	db 0x00
+
+	db 'x1c'	; 28
+	db 0x00
+
+	db 'x1d'	; 29
+	db 0x00
+
+	db 'x1e'	; 30
+	db 0x00
+
+	db 'x1f'	; 31
+	db 0x00
+
+	db 'x20'	; 32
+	db 0x00
+
+	db 'x21'	; 33
+	db 0x00
+
+	db 'x22'	; 34
+	db 0x00
+
+	db 'x23'	; 35
+	db 0x00
+
+	db 'x24'	; 36
+	db 0x00
+
+	db 'x25'	; 37
+	db 0x00
+
+	db 'x26'	; 38
+	db 0x00
+
+	db 'x27'	; 39
+	db 0x00
+
+	db 'x28'	; 40
+	db 0x00
+
+	db 'x29'	; 41
+	db 0x00
+
+	db 'x2a'	; 42
+	db 0x00
+
+	db 'x2b'	; 43
+	db 0x00
+
+	db 'x2c'	; 44
+	db 0x00
+
+	db 'x2d'	; 45
+	db 0x00
+
+	db 'x2e'	; 46
+	db 0x00
+
+	db 'x2f'	; 47
+	db 0x00
+
+	db 'x30'	; 48
+	db 0x00
+
+	db 'x31'	; 49
+	db 0x00
+
+	db 'x32'	; 50
+	db 0x00
+
+	db 'x33'	; 51
+	db 0x00
+
+	db 'x34'	; 52
+	db 0x00
+
+	db 'x35'	; 53
+	db 0x00
+
+	db 'x36'	; 54
+	db 0x00
+
+	db 'x37'	; 55
+	db 0x00
+
+	db 'x38'	; 56
+	db 0x00
+
+	db 'x39'	; 57
+	db 0x00
+
+	db 'x3a'	; 58
+	db 0x00
+
+	db 'x3b'	; 59
+	db 0x00
+
+	db 'x3c'	; 60
+	db 0x00
+
+	db 'x3d'	; 61
+	db 0x00
+
+	db 'x3e'	; 62
+	db 0x00
+
+	db 'x3f'	; 63
+	db 0x00
+
+	db 'x40'	; 64
+	db 0x00
+
+	db 'x41'	; 65
+	db 0x00
+
+	db 'x42'	; 66
+	db 0x00
+
+	db 'x43'	; 67
+	db 0x00
+
+	db 'x44'	; 68
+	db 0x00
+
+	db 'x45'	; 69
+	db 0x00
+
+	db 'x46'	; 70
+	db 0x00
+
+	db 'x47'	; 71
+	db 0x00
+
+	db 'x48'	; 72
+	db 0x00
+
+	db 'x49'	; 73
+	db 0x00
+
+	db 'x4a'	; 74
+	db 0x00
+
+	db 'x4b'	; 75
+	db 0x00
+
+	db 'x4c'	; 76
+	db 0x00
+
+	db 'x4d'	; 77
+	db 0x00
+
+	db 'x4e'	; 78
+	db 0x00
+
+	db 'x4f'	; 79
+	db 0x00
+
+	db 'x50'	; 80
+	db 0x00
+
+	db 'x51'	; 81
+	db 0x00
+
+	db 'x52'	; 82
+	db 0x00
+
+	db 'x53'	; 83
+	db 0x00
+
+	db 'x54'	; 84
+	db 0x00
+
+	db 'x55'	; 85
+	db 0x00
+
+	db 'x56'	; 86
+	db 0x00
+
+	db 'x57'	; 87
+	db 0x00
+
+	db 'x58'	; 88
+	db 0x00
+
+	db 'x59'	; 89
+	db 0x00
+
+	db 'x5a'	; 90
+	db 0x00
+
+	db 'x5b'	; 91
+	db 0x00
+
+	db 'x5c'	; 92
+	db 0x00
+
+	db 'x5d'	; 93
+	db 0x00
+
+	db 'x5e'	; 94
+	db 0x00
+
+	db 'x5f'	; 95
+	db 0x00
+
+	db 'x60'	; 96
+	db 0x00
+
+	db 'x61'	; 97
+	db 0x00
+
+	db 'x62'	; 98
+	db 0x00
+
+	db 'x63'	; 99
+	db 0x00
+
+	db 'x64'	; 100
+	db 0x00
+
+	db 'x65'	; 101
+	db 0x00
+
+	db 'x66'	; 102
+	db 0x00
+
+	db 'x67'	; 103
+	db 0x00
+
+	db 'x68'	; 104
+	db 0x00
+
+	db 'x69'	; 105
+	db 0x00
+
+	db 'x6a'	; 106
+	db 0x00
+
+	db 'x6b'	; 107
+	db 0x00
+
+	db 'x6c'	; 108
+	db 0x00
+
+	db 'x6d'	; 109
+	db 0x00
+
+	db 'x6e'	; 110
+	db 0x00
+
+	db 'x6f'	; 111
+	db 0x00
+
+	db 'x70'	; 112
+	db 0x00
+
+	db 'x71'	; 113
+	db 0x00
+
+	db 'x72'	; 114
+	db 0x00
+
+	db 'x73'	; 115
+	db 0x00
+
+	db 'x74'	; 116
+	db 0x00
+
+	db 'x75'	; 117
+	db 0x00
+
+	db 'x76'	; 118
+	db 0x00
+
+	db 'x77'	; 119
+	db 0x00
+
+	db 'x78'	; 120
+	db 0x00
+
+	db 'x79'	; 121
+	db 0x00
+
+	db 'x7a'	; 122
+	db 0x00
+
+	db 'x7b'	; 123
+	db 0x00
+
+	db 'x7c'	; 124
+	db 0x00
+
+	db 'x7d'	; 125
+	db 0x00
+
+	db 'x7e'	; 126
+	db 0x00
+
+	db 'x7f'	; 127
+	db 0x00
+
+	db 'x80'	; 128
+	db 0x00
+
+	db 'x81'	; 129
+	db 0x00
+
+	db 'x82'	; 130
+	db 0x00
+
+	db 'x83'	; 131
+	db 0x00
+
+	db 'x84'	; 132
+	db 0x00
+
+	db 'x85'	; 133
+	db 0x00
+
+	db 'x86'	; 134
+	db 0x00
+
+	db 'x87'	; 135
+	db 0x00
+
+	db 'x88'	; 136
+	db 0x00
+
+	db 'x89'	; 137
+	db 0x00
+
+	db 'x8a'	; 138
+	db 0x00
+
+	db 'x8b'	; 139
+	db 0x00
+
+	db 'x8c'	; 140
+	db 0x00
+
+	db 'x8d'	; 141
+	db 0x00
+
+	db 'x8e'	; 142
+	db 0x00
+
+	db 'x8f'	; 143
+	db 0x00
+
+	db 'x90'	; 144
+	db 0x00
+
+	db 'x91'	; 145
+	db 0x00
+
+	db 'x92'	; 146
+	db 0x00
+
+	db 'x93'	; 147
+	db 0x00
+
+	db 'x94'	; 148
+	db 0x00
+
+	db 'x95'	; 149
+	db 0x00
+
+	db 'x96'	; 150
+	db 0x00
+
+	db 'x97'	; 151
+	db 0x00
+
+	db 'x98'	; 152
+	db 0x00
+
+	db 'x99'	; 153
+	db 0x00
+
+	db 'x9a'	; 154
+	db 0x00
+
+	db 'x9b'	; 155
+	db 0x00
+
+	db 'x9c'	; 156
+	db 0x00
+
+	db 'x9d'	; 157
+	db 0x00
+
+	db 'x9e'	; 158
+	db 0x00
+
+	db 'x9f'	; 159
+	db 0x00
+
+	db 'xa0'	; 160
+	db 0x00
+
+	db 'xa1'	; 161
+	db 0x00
+
+	db 'xa2'	; 162
+	db 0x00
+
+	db 'xa3'	; 163
+	db 0x00
+
+	db 'xa4'	; 164
+	db 0x00
+
+	db 'xa5'	; 165
+	db 0x00
+
+	db 'xa6'	; 166
+	db 0x00
+
+	db 'xa7'	; 167
+	db 0x00
+
+	db 'xa8'	; 168
+	db 0x00
+
+	db 'xa9'	; 169
+	db 0x00
+
+	db 'xaa'	; 170
+	db 0x00
+
+	db 'xab'	; 171
+	db 0x00
+
+	db 'xac'	; 172
+	db 0x00
+
+	db 'xad'	; 173
+	db 0x00
+
+	db 'xae'	; 174
+	db 0x00
+
+	db 'xaf'	; 175
+	db 0x00
+
+	db 'xb0'	; 176
+	db 0x00
+
+	db 'xb1'	; 177
+	db 0x00
+
+	db 'xb2'	; 178
+	db 0x00
+
+	db 'xb3'	; 179
+	db 0x00
+
+	db 'xb4'	; 180
+	db 0x00
+
+	db 'xb5'	; 181
+	db 0x00
+
+	db 'xb6'	; 182
+	db 0x00
+
+	db 'xb7'	; 183
+	db 0x00
+
+	db 'xb8'	; 184
+	db 0x00
+
+	db 'xb9'	; 185
+	db 0x00
+
+	db 'xba'	; 186
+	db 0x00
+
+	db 'xbb'	; 187
+	db 0x00
+
+	db 'xbc'	; 188
+	db 0x00
+
+	db 'xbd'	; 189
+	db 0x00
+
+	db 'xbe'	; 190
+	db 0x00
+
+	db 'xbf'	; 191
+	db 0x00
+
+	db 'xc0'	; 192
+	db 0x00
+
+	db 'xc1'	; 193
+	db 0x00
+
+	db 'xc2'	; 194
+	db 0x00
+
+	db 'xc3'	; 195
+	db 0x00
+
+	db 'xc4'	; 196
+	db 0x00
+
+	db 'xc5'	; 197
+	db 0x00
+
+	db 'xc6'	; 198
+	db 0x00
+
+	db 'xc7'	; 199
+	db 0x00
+
+	db 'xc8'	; 200
+	db 0x00
+
+	db 'xc9'	; 201
+	db 0x00
+
+	db 'xca'	; 202
+	db 0x00
+
+	db 'xcb'	; 203
+	db 0x00
+
+	db 'xcc'	; 204
+	db 0x00
+
+	db 'xcd'	; 205
+	db 0x00
+
+	db 'xce'	; 206
+	db 0x00
+
+	db 'xcf'	; 207
+	db 0x00
+
+	db 'xd0'	; 208
+	db 0x00
+
+	db 'xd1'	; 209
+	db 0x00
+
+	db 'xd2'	; 210
+	db 0x00
+
+	db 'xd3'	; 211
+	db 0x00
+
+	db 'xd4'	; 212
+	db 0x00
+
+	db 'xd5'	; 213
+	db 0x00
+
+	db 'xd6'	; 214
+	db 0x00
+
+	db 'xd7'	; 215
+	db 0x00
+
+	db 'xd8'	; 216
+	db 0x00
+
+	db 'xd9'	; 217
+	db 0x00
+
+	db 'xda'	; 218
+	db 0x00
+
+	db 'xdb'	; 219
+	db 0x00
+
+	db 'xdc'	; 220
+	db 0x00
+
+	db 'xdd'	; 221
+	db 0x00
+
+	db 'xde'	; 222
+	db 0x00
+
+	db 'xdf'	; 223
+	db 0x00
+
+	db 'xe0'	; 224
+	db 0x00
+
+	db 'xe1'	; 225
+	db 0x00
+
+	db 'xe2'	; 226
+	db 0x00
+
+	db 'xe3'	; 227
+	db 0x00
+
+	db 'xe4'	; 228
+	db 0x00
+
+	db 'xe5'	; 229
+	db 0x00
+
+	db 'xe6'	; 230
+	db 0x00
+
+	db 'xe7'	; 231
+	db 0x00
+
+	db 'xe8'	; 232
+	db 0x00
+
+	db 'xe9'	; 233
+	db 0x00
+
+	db 'xea'	; 234
+	db 0x00
+
+	db 'xeb'	; 235
+	db 0x00
+
+	db 'xec'	; 236
+	db 0x00
+
+	db 'xed'	; 237
+	db 0x00
+
+	db 'xee'	; 238
+	db 0x00
+
+	db 'xef'	; 239
+	db 0x00
+
+	db 'xf0'	; 240
+	db 0x00
+
+	db 'xf1'	; 241
+	db 0x00
+
+	db 'xf2'	; 242
+	db 0x00
+
+	db 'xf3'	; 243
+	db 0x00
+
+	db 'xf4'	; 244
+	db 0x00
+
+	db 'xf5'	; 245
+	db 0x00
+
+	db 'xf6'	; 246
+	db 0x00
+
+	db 'xf7'	; 247
+	db 0x00
+
+	db 'xf8'	; 248
+	db 0x00
+
+	db 'xf9'	; 249
+	db 0x00
+
+	db 'xfa'	; 250
+	db 0x00
+
+	db 'xfb'	; 251
+	db 0x00
+
+	db 'xfc'	; 252
+	db 0x00
+
+	db 'xfd'	; 253
+	db 0x00
+
+	db 'xfe'	; 254
+	db 0x00
+
+	db 'xff'	; 255
+	db 0x00
+
