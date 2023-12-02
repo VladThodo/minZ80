@@ -1,0 +1,37 @@
+;*******************************************
+;	Copyright (C) Vlad Todosin 2023
+;*******************************************
+
+; This file contains all the I/O addresses and config words
+
+; Main PIO registers addr and config words
+
+	port_a_c: equ %00000010	; porta control register
+	port_a_d: equ %00000000	; porta data register
+
+	port_b_c: equ %00000011	; portb control register
+	port_b_d: equ %00000001	; portb data register
+	
+	pio_out_word: equ %00001111	; out word for the PIO
+	pio_bit_mode: equ %11001111	; bit mode word for the PIO
+	
+	; If the PIO is used in bit mode, an additional config
+	; byte is required in order to select whether a pin will act
+	; as an input or output. 1 - input, 0 - output
+
+; LCD control words
+
+	lcd_enable: equ %00001100 ; LCD enable control
+	lcd_rs:		equ %00001001 ; LCD register select
+	lcd_rw:		equ %00001010 ; LCD read/write	
+
+; Sound chip control words
+
+	snd_we_off: equ %00001000 ; Sound chip write enable off
+	snd_we_on:  equ %00000000 ; /WE is active low
+
+; RAM addr for stackpointer
+
+	sp_ram_addr: equ 0xFFFF
+	prog_length: equ 0xA000
+	prog_start:	 equ 0xA000	
