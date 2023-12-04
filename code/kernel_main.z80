@@ -46,11 +46,11 @@ small_loop:
 	inc hl
 	ld a,b
 	dec a
-	jp z, prog_start
+	jp z, finish
 	ld b,a
 	jp small_loop
 finish:
-	halt
+	halt	; Here we stop executing code
 	jp loop	; Infinite loop. Yay!
 
 sound_chip_init:	; Init routine for our sound chip
