@@ -151,6 +151,10 @@ print_hex:
 	pop hl
 	ret
 
+; The following routines are a "bit-banged" approach for serial communication with
+; no additional hardware needed. The system is running at 62.5kHz and the baud rate for which
+; this has been timed is 200 bps. Almost works.
+
 ; Receive a serial byte and print it on the LCD
 
 serial_wait:
