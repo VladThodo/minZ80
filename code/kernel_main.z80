@@ -3,6 +3,7 @@
 ;**************************************************
 
 ; This file contains the main code of the SBC
+; Serial I/O routines are located in a separate file
 
 	include "constants.z80"
 

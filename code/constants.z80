@@ -4,6 +4,7 @@
 
 ; This file contains all the I/O addresses and config words
 
+
 ; Main PIO registers addr and config words
 
 	port_a_c: equ %00000010	; porta control register
