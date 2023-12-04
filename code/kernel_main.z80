@@ -8,13 +8,9 @@
 
 	org 0x00
 
-	; The Z80 starts executing code at addr 0x00.
-	; A HEX look-up table is defined starting at addr 0x03 which takes
-	; approximately 768 bytes.
-	; We want to jump past the look-up table as soon as the CPU begins
-	; executing code.
+; Hex look-up table included at the end of this file
 
-sbc_init:	; Main init routine of the processor
+sbc_init:	; Main init routine of the system
 	ld sp, sp_ram_addr ; Set the stackpointer somewhere high in RAM
 	di					; Disable interrupts
 	
